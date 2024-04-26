@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listado de Reservas </title>
+    <link rel="stylesheet" href="../../public/css/estilos.css">
+    <script src="https://kit.fontawesome.com/c273467a6c.js" crossorigin="anonymous"></script>
+    <script defer src="../../public/js/movil.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <figure class="figure">
+                <img src="../../public/img/carwashbrown.png" alt="" class="logo">
+            </figure>    
+            <button class="navbar-movil" aria-label="abrir menu"><i class="fa-solid fa-bars"></i></button>
+            <ul class="navlista">
+                <li class="navitem"><a class="navlink navlink-active" href="#"><i class="fa-solid fa-house"></i>Panel</a></li>
+                <li class="navitem"><a class="navlink navlink-active" href="../../views/panel/listadoreservas.html"><i class="fa-solid fa-list"></i>Listado Reservas</a></li>
+                <li class="navitem"><a class="navlink navlink-active" href="#"><i class="fa fa-users" aria-hidden="true"></i>Listado Usuarios </a></li>
+                <li class="navitem"><a class="navlink navlink-active" href="#"><i class="fa-solid fa-users"></i>Listado Contactos</a></li>
+                <li class="navitem"><a class="navlink navlink-active" href="../../index.html"><i class="far fa-window-close"></i>Cerrar</a></li>
+             </ul>
+        </nav>
+    </header>
+
+    <main class="principal">  
+        <h1 class="titulo"> Listado de Reservas</h1>
+        <section class="contenedor-listado-servicios">
+                        <section class="contenedor-table">
+                            <table class="tableUs">
+                                <thead class="theadUs">    
+                                    <tr class="trUs">                                    
+                                        <th class="thUs">id</th>
+                                        <th class="thUs">Fecha Actual</th>
+                                        <th class="thUs">Documento</th>
+                                        <th class="thUs">Apellidos y Nombres</th>                                        
+                                        <th class="thUs">Fecha de Reserva</th>
+                                        <th class="thUs">Tipo de Vehiculo</th>
+                                        <th class="thUs">Estado</th>
+                                        <th class="thUs">Accion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="trUs">
+                                        <td class="tdUs"> 1</td>
+                                        <td class="tdUs"> 08/04/2024 15:35</td>
+                                        <td class="tdUs"> 12345678</td>
+                                        <td class="tdUs"> Palacios Juan</td>
+                                        <td class="tdUs"> 20/04/2024 15:35</td>
+                                        <td class="tdUs"> Auto</td>
+                                        <td class="tdUs"> En proceso..</td>
+                                        <td class="tdUs"> <button><a href="../../views/panel/detallereserva.html"><i class="fa-regular fa-eye"></i></a></button></td>
+                                    </tr>
+                                    <tr class="trUs">
+                                        <td class="tdUs"> 2</td>
+                                        <td class="tdUs"> 20/04/2024 15:35</td>
+                                        <td class="tdUs"> 12345678</td>
+                                        <td class="tdUs"> Palacios Juan</td>
+                                        <td class="tdUs"> 20/04/2024 15:35</td>
+                                        <td class="tdUs"> Camion</td>
+                                        <td class="tdUs"> Atendido</td>
+                                        <td class="tdUs"> <button><a href="../../views/panel/detallereserva.html"><i class="fa-regular fa-eye"></i></a></button></td>
+                                    </tr>
+                                    <tr class="trUs">
+                                        <td class="tdUs"> 3</td>
+                                        <td class="tdUs"> 15/04/2024 15:35</td>
+                                        <td class="tdUs"> 12345678</td>
+                                        <td class="tdUs"> Palacios Juan</td>
+                                        <td class="tdUs"> 25/04/2024 15:35</td>
+                                        <td class="tdUs"> Auto</td>
+                                        <td class="tdUs"> En Proceso..</td>
+                                        <td class="tdUs"> <button><a href="../../views/panel/detallereserva.html"><i class="fa-regular fa-eye"></i></a></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <section>
+        </section>
+    </footer>
+</body>
+</html>

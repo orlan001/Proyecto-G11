@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="../public/css/estilos.css">
+    <script src="https://kit.fontawesome.com/c273467a6c.js" crossorigin="anonymous"></script>
+    <script defer src="../public/js/movil.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <figure class="figure">
+                <img src="../public/img/carwashbrown.png" alt="imagen lavado de auto" class="logo">
+            </figure>
+            <button class="navbar-movil" aria-label="abrir menu"><i class="fa-solid fa-bars"></i></button>
+            <ul class="navlista">
+                <li class="navitem"><a class="navlink navlink-active" href="../index.html"><i class="fa-solid fa-house icon"></i>Inicio</a></li>
+                <li class="navitem"><a class="navlink navlink-active" href="../views/turno.html"><i class="fa-solid fa-car icon"></i>Solicitar Turno </a></li>
+                <li class="navitem"><a class="navlink navlink-active" href="../views/about.html"><i class="fa-solid fa-users icon"></i>Acerca de nosotros</a></li>
+                <li class="navitem"><a class="navlink navlink-active" href="../views/contact.html"><i class="fa-regular fa-address-book icon"></i>Contacto</a></li>
+                <li class="navitem"><a class="navlink navlink-active" href="../views/login.html"><i class="fa-solid fa-lock icon"></i>Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="principal"> 
+        <section class="contenedor-login">
+            <figure class="imagen-login">
+                <img src="../public/img/carwashgreen.png">
+            </figure>
+            <form action="" class="form-login" method="post">
+                <p class="titulo-login"> Acceder a la Plataforma </p>
+                <i class="fa-regular fa-envelope"></i>
+                <label  for="usuario">Usuario:</label>
+                <input type="text" class="box-login" name="usuario" id="usuario" required placeholder="Ingrese nombrre Usuario"><br>
+                <i class="fa-solid fa-lock"></i>
+                <label  for="password">Contraseña:</label>
+                <input type="password" class="box-login" name="password" id="password" required placeholder="Ingrese su Contraseña"><br>
+                <button type="submit" class="boton-login"><a href="../views/panel/listadoreservas.html" class="btn-login">Ingresar al Sistema</a></button>
+            </form>                    
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p> Copyright@2024 - Grupo11 todos los Derechos reservados</p>
+        <section>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></i></a>
+        </section>
+    </footer>
+</body>
+</html>

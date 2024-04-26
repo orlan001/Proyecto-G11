@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Reserva</title>
+    <link rel="stylesheet" href="../../public/css/estilos.css">
+    <script src="https://kit.fontawesome.com/c273467a6c.js" crossorigin="anonymous"></script>
+    <script defer src="../../public/js/movil.js"></script>
+</head>
+<body>
+    <header class="header">
+        <button class="boton-reserva-cancelar boton-reserva"> <a class="link-btn-cancelar" href="../../views/panel/listadoreservas.html"><i class="far fa-window-close icon-detalle-reserva"></i>Cancelar</a> </button>                        
+    </header>
+
+    <main class="principal">  
+        <h1 class="titulo"> Datos Generados de Reserva</h1>
+        <section class="contenedor-reserva">
+            <section class="contenedor-detalle-reserva">
+                <legend><strong>Datos</strong></legend> 
+                <hr>
+                <form action="" class="form-detalle-reserva" method="post">                     
+                    <label for="dni" class="label" > Numero DNI:</label>
+                    <input type="text" id="dni" class="box-reserva" name="dni"><br>
+                    <label for="nombre" class="label" >Nombre del Cliente: </label>
+                    <input type="text" id="nombre" class="box-reserva" name="nombre"><br>
+                    <label for="email"class="label">Correo Electronico </label>
+                    <input type="text" id="email" class="box-reserva" name="email"><br>
+                    <label for="telefono" class="label">Telefono:</label>
+                    <input type="text" class="box-reserva" name="telefono" id="telefono"><br> 
+                    <label for="tipovehiculo" class="label">Tipo de Vehiculo: </label>
+                    <input type="text" class="box-reserva" name="tipovehiculo" id="tipovehiculo" ><br>
+                    <label for="fechareserva" class="label">Fecha de Rreserva: </label>
+                    <input type="text" class="box-reserva" name="fechareserva" id="fechareserva" ><br>
+                </form> 
+                <button class="boton-reserva boton-reserva-estado">Actualizar Estado de Reserva </button>
+                <button class="boton-reserva">Borrar Reserva </button>                        
+            </section>
+            
+            <section class="contenedor-detalle-reserva">
+                        <legend><strong>Servicios</strong></legend>                        
+                        <hr>
+                        <table class="tableUs table-reserva">
+                            <thead class="theadUs">    
+                                <tr class="trUs">
+                                    <th class="thUs">Tipo de Servicios</th>
+                                    <th class="thUs">Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="trUs">
+                                    <td class="tdUs"> Lavado</td>
+                                    <td class="tdUs"> 3000.00</td>
+                                </tr>
+                                <tr class="trUs">
+                                    <td class="tdUs"> Encerado</td>
+                                    <td class="tdUs"> 3000.00</td>
+                                </tr>
+                                <tr class="trUs">
+                                    <td class="tdUs"> Interior</td>
+                                    <td class="tdUs"> 3000.00</td>
+                                </tr>
+                                <tr class="trUs">
+                                    <td class="tdUs"> Siliconado de Neumaticos</td>
+                                    <td class="tdUs"> 3000.00</td>
+                                </tr>
+                                <tr class="trUs">
+                                    <td class="tdUs"> motor</td>
+                                    <td class="tdUs"> 3000.00</td>                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                        <label class="mensaje-estado-reserva">Estado:<strong>En Proceso..</strong ></label>
+                        <label class="mensaje-total-reserva">Total Monto:<strong>$ 15000</strong> </label>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <section>
+        </section>
+    </footer>
+</body>
+</html>

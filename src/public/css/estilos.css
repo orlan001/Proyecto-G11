@@ -1,0 +1,675 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color:#FFFDD7;
+    min-height: 100vh;
+    padding: 5px 5px;
+}
+
+.header{
+    background-color: #f6d5a6;
+    height: 120px;
+    width: 100%;
+    top:0;
+    left: 0;
+}
+
+.navbar{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;    
+    background-color: #f6d5a6;
+    max-width: 992px;
+    margin:0 auto;
+}
+
+.figure{
+    background-color: #f6d5a6;
+    height: 110px;
+    animation: aparece 8s linear infinite;
+    padding: auto;
+}
+
+.navbar-movil{
+    color: black;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+}
+
+.navlista{
+    display: flex;
+    padding: 10px;
+    height: 40px;
+    margin: 10px;
+    list-style: none;
+}
+
+.navitem{
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    margin-top: 10px;
+
+}
+
+.navlink{
+    text-decoration: none;
+    font-size:16px ;
+    padding: 15px;
+    color: #643843;
+}
+
+.navlink:hover{
+    background-color: #643843;
+    transition: 0.5s;
+    color: white   
+}
+
+.logo{
+    width: 120px;
+    height: 120px;
+   /* filter:drop-shadow(4px 4px 4px black);*/
+}
+
+.icon{
+    margin: 5px;
+}
+
+ .principal{
+    margin: 5px;
+    width: 100%;
+ }
+
+ .contenedor-about,
+ .contenedor-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 50px auto;
+ }
+
+ .contenedor-inicio{
+    width: 100%;
+    margin: 2px;
+ }
+
+ .contenedor-contacto{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+ }
+
+ .contenedor-turno{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .imagen-login{
+    display: flex;
+    height: 60px;
+    margin: auto;
+    margin-top: 10px;
+ }
+
+ .imagen-login img{
+    width: 30%;
+    margin: auto;
+ }
+
+ .titulo{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    font-family: "Anton", sans-serif;
+    font-weight: 500;
+ }
+
+ .titulo-contacto{
+    display: block;
+    text-align: center;
+ }
+ 
+ .titulo-login{
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 10px;
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    padding: 10px;
+ }
+
+ .titulo-form-contacto{
+    background-color: #fff3d6;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    padding: 10px;
+ }
+
+ .titulo-inicio {
+    position: relative;
+    animation-name: aparece;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    color: green;
+    margin: auto;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+  }
+ 
+ .box-login, 
+ .box-contacto{
+    display: flex;
+    flex-direction: column;
+    height: 25px;
+    width: 250px;
+    padding: 5px;
+    border-width: 1px;
+    margin:auto;
+    border-style: solid;
+    outline-color: #cac3c3;
+ }
+
+ .box-turno {
+    height: 22px;
+    width: 250px;
+    padding: 2px;
+    margin-bottom: 10px;
+    border: none;
+    border-color:#f6d5a6;
+    border-radius: 10px;
+    outline:none;
+ }
+
+ .box-contacto-mensaje{
+    display: block;
+    width: 250px;
+    border-color: rgb(238, 186, 148);
+    outline:none;
+    border-width: 1px;
+    height: 100px;
+    margin-bottom: 20px;
+ }
+
+.boton-login, 
+.boton-contacto, 
+.boton-turno{
+    display: block;
+    /*background-color:#e2cbd1;*/
+    background-color:#e2cbd1;
+    border-radius: 40px;
+    outline: none;
+    box-shadow: 2px 2px black;
+    border-color: white;
+    border-width: 2px;
+    color:#643843;
+    height: 30px;
+    width: 250px;
+    margin: 20px auto;
+    outline-offset: 2px;
+ }
+ 
+.boton-login:hover, 
+.boton-contacto:hover, 
+.boton-turno:hover{
+    background-color: #e6d4d8;;
+    color:white;
+    cursor: pointer;
+   
+ }
+ 
+ .form-grupo{
+    border-color: #f1e9eb;
+    border-width: 1px;
+    outline: none;
+ }
+ ::placeholder{
+    color:lightslategrey;
+    opacity: 0.6;
+ }
+
+ .contenedor-mapa-contacto,
+ .contenedor-form-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 20px;
+ }
+
+ .form-contacto{
+    margin-bottom: 20px;
+    margin: auto;
+
+ }
+
+.contenedor-ubicacion-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightslategrey;
+    border-radius: 1000px;
+    width: 400px;
+    color:white;
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.contenedor-ubicacion{
+    display: flex;
+    text-align: center;
+}
+
+.mapa-contacto{
+    display: block;
+    width: 400px;
+    height: 200px;
+ }
+
+ .img-contacto{
+    display: block;
+    margin-top: 5px;
+    width: 400px;
+    height: 200px;
+ }
+
+ .form-turno{
+    background-color:#f3e7d1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 30px;
+    color: #643843;
+    gap: 10px;
+    padding: 20px;
+    justify-content: center;
+    width: 70%;
+ }
+ 
+ .form-login{
+    margin: 20px auto;
+ }
+
+.imagen-about-nosotros{
+    display: block;
+    height: 350px;
+    width: 400px;
+    margin: auto;
+}
+
+.descripcion-about{
+    font-style: normal;
+    text-align: justify;
+    padding: 30px;
+    margin: 30px;
+}
+
+.contenedor-imagen-servicios{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;    
+}
+
+.legend{
+    color: blueviolet;
+    margin-top: 5px;    
+    margin-bottom: 10px;
+    border-bottom-color: aqua;
+}
+
+.label{
+    display:inline-block;
+    width: 155px;
+    text-align: right;
+}
+
+.contenedor-reserva{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-content: center;
+    align-items: start;
+    width: 70%;
+    margin: 10px auto;
+    gap: 1px;
+}
+
+.contenedor-detalle-reserva{
+    margin: 10px auto 25px;
+}
+
+.form-detalle-reserva{
+    margin:25px 10px;
+}
+
+.box-reserva{
+    margin: 5px auto;
+    padding: 1px;
+    width: 200px;
+    height: 18px;
+    border: 1px solid rgb(188, 175, 201);
+    outline: none;
+}
+
+.boton-reserva{
+    padding: 5px 5px;
+    background-color: #ee2e24;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 200px;
+    color: white;
+}
+.boton-reserva-cancelar{
+    background-color: rgb(235, 141, 19);
+    margin-right: 0px;
+    margin-left: 1000px;
+    width: 150px;
+}
+.boton-reserva-estado{
+    background-color: #1372ee;
+}
+
+.mensaje-estado-reserva strong{
+    color:rgb(45, 151, 45);
+    margin: 30px;
+}
+
+.mesanje-parrafo-table{
+    font-size: 12px;
+    color: #643843;
+}
+
+
+@keyframes aparece{
+    from{transform: rotateY(180deg)}
+    to{transform: rotateY(-360deg); }
+    /*0%{color:green; left: -80px; top:-60px;font-family: "Anton", sans-serif;font-weight: 500;font-style: normal;font-size: 40px;}
+    25%{color:blue; left: 350px; top:-60px;font-family: "Anton", sans-serif;font-weight: 500;font-style: normal;font-size: 40px}
+    50%{color:red; left: 350px; top:50px;font-family: "Anton", sans-serif;font-weight: 500;font-style: normal;font-size: 40px}
+    75%{color:#643843; left:-80px; top:50px;font-family: "Anton", sans-serif;font-weight: 500;font-style: normal;font-size: 40px}
+    100%{color:orangered; left: -80px; top:-60px;font-family: "Anton", sans-serif;font-weight: 500;font-style: normal;font-size: 40px}*/
+}
+
+.img-inicio, 
+.img-about{
+
+    width: 250px;
+    height: 250px;
+    object-fit:cover;
+}
+
+.figure-inicio, 
+.figure-about{
+    width: 250px;
+    justify-content: center;
+}
+
+.contenedor-card-inicio{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.parrafo-inicio{
+    text-align: justify;
+    width: 250px;
+ }
+ .titulo-servicio-about,
+.titulo-servicio-inicio{
+    width: 250px;
+    text-align: center;
+    font-size: 18px;
+    color: #0F362D;
+    margin: 10px 10px;
+}
+
+.titulo-about,
+.titulo-ubicacion,
+.titulo-turno-table{
+    text-align: center;
+    font-size: 18px;
+    color: blueviolet;
+    margin: 10px auto;
+    border-bottom-color: aqua;
+}
+
+ .card-img-inicio, 
+ .card-img-about {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 30px;
+    justify-content:flex-start;
+ }
+
+ .contenedor-table-inicio{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.contenedor-table-servicios{
+    justify-content: center;
+    width: 250px;
+    margin: 20px 30px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f6d5a6;
+    text-align: center;
+    color: #643843;
+    height: 100px;
+    width: 100%;
+    bottom:0;
+    left: 0;
+ }
+
+.titulo-form{
+    background-color: #369681;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.contenedor-table{
+    grid-column: 1/3;
+    text-align: center;
+    margin: 40px auto;
+}
+
+.tableUs{
+    background-color: white;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.theadUs{
+    /*background-color: #246355;*/
+    background-color:#EFF6E0;
+    border-bottom: solid 1px #0F362D;
+    border-radius: 200px;
+    color:#643843 ;
+}
+
+.thUs, .tdUs{
+    padding: 10px;
+}
+
+.trUs:nth-child(even){
+    background-color: #ddd;
+}
+
+.trUs:hover .tdUs{
+    /*background-color: #369681;*/
+    background-color: #f6d5a6;
+    color: white;
+}
+
+.table-reserva{
+    margin-bottom: 30px;
+    width: 400px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.icon-detalle-reserva{
+    width: 50px;
+    height: 50px;
+}
+.btn-login:hover{
+    color:white;
+}
+.btn-login{
+    text-decoration: none;
+}
+
+.link-btn-cancelar{
+    text-decoration: none;
+    color:#ddd;
+}
+
+@media (max-width:768px){
+
+    body{
+        padding-top: 10px;
+    }
+
+    .header{
+        height: 75px;
+        background-color: #643843;
+        position: fixed;
+        z-index: 1;
+    }    
+    
+    .logo{
+        width: 60px;
+        height: 60px;
+    }
+
+    .navbar-movil{
+        display: block;
+    }
+    
+    .navlink{
+        color: #643843;
+    }
+    
+
+    .navlista{
+        flex-direction: column;
+        align-items: center;
+        margin: 5px 5px; 
+        background-color:#FFFDD7;
+        position: fixed;
+        z-index: 1;
+        top: 70px;
+        padding: 10px 0;
+        width: 100%;
+        height: calc(100%);
+        left: 100%;
+        transition: left 0.3s;
+        font-size: 18px;
+        font-family: "Anton", sans-serif;
+    }
+        
+
+    .navitem{
+        line-height: 70px;
+    }
+    
+    .navlink:hover{
+        background:none;
+        color:red
+
+    }
+
+    .navlink-active:active{
+        color:yellow;
+    }
+        
+    .principal{
+        margin-top: 70px;
+    }
+    .navlista-visible{
+        left: 0;
+    }
+    .navbar-movil:focus:not(:focus-visible){
+        outline: none;
+    }
+
+    .figure{
+        height: 70px;
+        padding: auto;
+    }
+    
+    .box-turno {
+        width: 200px;
+     }
+
+     .contenedor-contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        text-align: center;
+        align-items: center;
+     }
+     .contenedor-table-inicio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .form-turno{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .label{
+        display: block;
+        text-align: center;
+        width: 155px;
+    }
+    .contenedor-ubicacion{
+        flex-direction: column;
+    }
+}
+    

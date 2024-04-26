@@ -1,0 +1,94 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    color: green;
+    padding: 50px 50px;
+    background-color: azure;
+}
+
+body{
+    background-color: aqua;
+}
+section > section{
+    background-color: rgb(240, 150, 65);
+    padding: 10px;
+    text-align: justify;
+}
+.sec1{
+    color:rgb(44, 40, 40);
+    grid-column: 1/4;
+}
+.sec1{
+    background:repeating-linear-gradient(45deg, #11f 10%, #44f 22%);
+    counter-increment: detail-counter;
+
+}
+
+.sec1::before {
+    content: counter(detail-counter) " ";
+    font-weight: bold;
+    color: red;
+  }
+
+.sec2{
+    color: green;
+
+}
+.sec3{
+    color: blue;
+    
+}
+.sec4{
+    color: yellow;
+    grid-column: 2/4;
+    
+}
+
+.sec6{
+    color: yellow;
+    grid-column: 1/5;
+}
+
+.verde{
+    background-color: green;
+}
+
+.rojo{
+    background-color: red;
+}
+
+.row{
+    background-color: aqua;
+    margin-bottom: 20px;
+}
+.col-md-8{
+    background-color: green;
+}
+.col-md-4{
+    background-color: antiquewhite;
+}
+
+
+.modal1{
+    opacity: 0;
+    pointer-events: none;
+    background-color: black;
+    position: fixed;
+    display: grid;
+    inset: 100px 200px;
+    transition: opacity 0.3s;
+}
+
+.show{
+    pointer-events: unset;
+    opacity:1;
+}
+.cerrar-modal{
+    font-size: 30px;
+    color:red;
+    cursor: pointer;
+    background-color: aqua; 
+    width: 20px;
+    z-index: 2;  
+}

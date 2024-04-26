@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacto</title>
+    <link rel="stylesheet" href="../public/css/estilos.css">
+    <script src="https://kit.fontawesome.com/c273467a6c.js" crossorigin="anonymous"></script>
+    <script defer src="../public/js/movil.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <figure class="figure">
+                <img src="../public/img/carwashbrown.png" alt="imagen lavado de auto" class="logo">
+            </figure>
+            <button class="navbar-movil" aria-label="abrir menu"><i class="fa-solid fa-bars"></i></button>
+            <ul class="navlista">
+                <li class="navitem"><a class="navlink navlink-active" href="../index.html"><i class="fa-solid fa-house icon"></i>Inicio</a></li>
+                <li class="navitem"><a class="navlink navlink-active" href="../views/turno.html"><i class="fa-solid fa-car icon"></i>Solicitar Turno </a></li>
+                <li class="navitem"><a class="navlink navlink-active" href="../views/about.html"><i class="fa-solid fa-users icon"></i>Acerca de nosotros</a></li>
+                <li class="navitem"><a class="navlink navlink-active" href="../views/contact.html"><i class="fa-regular fa-address-book icon"></i>Contacto</a></li>
+                <li class="navitem"><a class="navlink navlink-active" href="../views/login.html"><i class="fa-solid fa-lock icon"></i>Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main class="principal">
+        <section class="contenedor-contacto">
+            <h1 class="titulo"> Contacto </h1>
+            <article class="contenedor-ubicacion">
+                <div class="contenedor-ubicacion-contacto">
+                    <P><i class="fa-solid fa-location-pin"></i>Estamos ubicado en San Martin 953 CABA</P>
+                    <P><i class="fa-solid fa-phone"></i>1154084213</P>
+                    <p><strong>Horario de Atencion</strong></p>
+                    <p>Mañana 8:30 - 14:00hrs</p>
+                    <p>tarde  15:30 - 18:00hrs</p>    
+                </div>
+    
+                <div class="contenedor-mapa-contacto">
+                    <iframe class="mapa-contacto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.871269807724!2d-58.448880025003994!3d-34.607416557692325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca118da22a2f%3A0x37b0a5e9063002c!2sAv.%20S.%20Mart%C3%ADn%20953%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1711238775036!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <img src="../public/img/local.png" alt="local de lavado" class="img-contacto">
+                </div>
+    
+                <div class="contenedor-form-contacto">                
+                    <h2 class="titulo-ubicacion">Dejanos tu Mensaje</h2><br>
+                    <form method="post" class="form-contacto">
+                        <label for="correo"> Tu Correo:</label>
+                        <input type="email" name="correo" class="box-contacto" id="correo" required placeholder="ingrese su correo"><br>
+                        <label for="nombre"> Tu Nombre:</label>
+                        <input type="text" name="nombre" class="box-contacto" id="nombre" required placeholder="Ingrese su nombre"><br>
+                        <label for="mensaje"> Tu Mensaje:</label>
+                        <textarea name="mensaje" id="mensaje" class="box-contacto-mensaje" cols="30" rows="10" placeholder="Escriba su mensaje.."></textarea><br>
+                        <input type="submit" class="boton-contacto" value="Enviar">
+                    </form>
+                </div>                
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <p> Copyright@2024 - Grupo11 todos los Derechos reservados</p>
+        <div>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
