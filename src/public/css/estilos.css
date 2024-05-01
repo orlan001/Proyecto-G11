@@ -196,6 +196,7 @@ body{
     margin:auto;
     border-style: solid;
     outline-color: #cac3c3;
+
  }
 
  .box-turno {
@@ -314,6 +315,7 @@ body{
  
  .form-login{
     margin: 20px auto;
+    width: min-content;
  }
 
 .imagen-about-nosotros{
@@ -564,6 +566,12 @@ html{
     color:#ddd;
 }
 
+.mensaje-password,
+.mensaje-usuario{
+    background-color: #70e99e;
+    text-align: center;
+}
+
 @media (max-width:768px){
 
     body{
@@ -607,8 +615,7 @@ html{
         font-size: 18px;
         font-family: "Anton", sans-serif;
     }
-        
-
+    
     .navitem{
         line-height: 70px;
     }
