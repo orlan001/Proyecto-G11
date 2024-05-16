@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../public/css/estilos.css">
     <script src="https://kit.fontawesome.com/c273467a6c.js" crossorigin="anonymous"></script>
     <script defer src="../public/js/movil.js"></script>
+    <script defer src="../public/js/formTurno.js"></script>
 </head>
 
 <body>
@@ -29,46 +30,43 @@
     <main class="principal">  
         <section class="contenedor-turno">
             <h1 class="titulo"> Sistema de Reservas de Turnos</h1>
-            <form class="form-turno" method="post"> 
+            <form class="form-turno" id="form-turno" name="form-turno" method="post"> 
                 <fieldset class="form-grupo">
-                    <legend class="legend"> <strong>Datos del vehiculo</strong></legend>                                
+                    <legend class="legend"> <strong>Datos personales : </strong> </legend>
+                    <label for="dni" class="label">Documento: </label>
+                    <input type="text" class="box-turno" name="dni" id="dni" required placeholder="Ingrese numero Documento "><br>
+                    <label for="nombre" class="label">Apellidos y Nombres: </label>
+                    <input type="text" class="box-turno" name="nombre" id="nombre"  placeholder="Ingrese apellidos y nombres.."><br>
+                    <label for="email" class="label">Email: </label> 
+                    <input type="email" id="email" class="email box-turno" name="email"  placeholder="Ingrese su email."><br>
+                    <p class="text-danger d-none text-justify text-wrap mensaje-email" ></p>
+                    <label for="telefono" class="label">telefono: </label>
+                    <input type="tel" id="telefono" class="box-turno" name="telefono" placeholder="Ingrese su numero telefono."><br>
+                </fieldset>
+
+                <fieldset class="form-grupo">
+                        <legend class="legend"> <strong> Datos del vehiculo :</strong></legend>                                
                         <label  class="label" for="tiposervicio"> Tipo de vehiculo:</label>
-                        <select id="tiposervicio" class="box-turno">
-                            <option value="auto" >Auto</option>
-                            <option value="camioneta" >Camioneta</option>
-                            <option value="moto" >Moto</option>
-                            <option value="camion" >Camion</option>
-                            <option value="autobus">Auto Bus</option>
-                            <option value="otros">Otros</option>
+                        <select  name="tipo-vehiculo"  id="tipo-vehiculo" class="box-turno">
+                            <option value="" >Selecciones tipo de Vehiculo</option>
                         </select><br>    
                         <label for="patente" class="label" >Patente: </label>
                         <input type="text" id="patente" class="box-turno" name="patente" placeholder="Ingrese su pantente del vehiculo."><br>
                         <label for="descripcion" class="label">Descripcion del Vehiculo: </label>
                         <input type="text" id="descripcion" class="box-turno" name="descripcion" placeholder="Ingrese descripcion marca/modelo etc."><br>
                         <label for="fecha" class="label">fecha de Reserva:</label>
-                        <input type="date" class="box-turno" name="fecha" id="fecha" required><br> 
+                        <input type="date" class="box-turno" name="fecha" id="fecha" ><br> 
                         <label for="hora" class="label">Hora de Reserva: </label>
-                        <input type="time" class="box-turno" name="hora" id="hora" required><br>
+                        <input type="time" class="box-turno" name="hora" id="hora" ><br>
                 </fieldset>
 
-                <fieldset class="form-grupo">
-                    <legend class="legend"> <strong>Datos personales</strong> </legend>
-                        <label for="dni" class="label">Documento: </label>
-                        <input type="text" class="box-turno" name="dni" id="dni" required placeholder="Ingrese numero Documento "><br>
-                        <label for="nombre" class="label">Apellidos y Nombres: </label>
-                        <input type="text" class="box-turno" name="nombre" id="nombre" required placeholder="Ingrese apellidos y nombres.."><br>
-                        <label for="email" class="label">Email: </label> 
-                        <input type="email" id="email" class="box-turno" name="email" required placeholder="Ingrese su email."><br>
-                        <label for="telefono" class="label">telefono: </label>
-                        <input type="tel" id="telefono" class="box-turno" name="telefono" placeholder="Ingrese su numero telefono."><br>
-                </fieldset>
-                        
                 <article class="contenedor-table">
                     <h2 class="titulo-turno-table"> <strong>Seleccione los tipos de servicios</strong> </h2>
-                    <p class="mesanje-parrafo-table"> Antes seleccione el tipo de vehiculo por favor..</p>    
+                    <p class="mensaje-parrafo-table"> Antes seleccione el tipo de vehiculo por favor..</p>    
                     <table class="tableUs">
                         <thead class="theadUs">    
                             <tr class="trUs">
+                                <th class="thUs">#</th>
                                 <th class="thUs">Seleccione</th>
                                 <th class="thUs">Tipo de Servicio</th>
                                 <th class="thUs">Precio</th>
@@ -76,33 +74,39 @@
                         </thead>
                         <tbody>
                             <tr class="trUs">
-                                <td class="tdUs"><input type="checkbox"></td>
-                                <td class="tdUs"> Lavado</td>
-                                <td class="tdUs"> 3000.00</td>
+                                <td class="tdUs"><input hidden type="text" id="id">1</td>
+                                <td class="tdUs"><input  type="checkbox" class="tipo-servicio" name="tipo-servicio[]" id="tipo-servicio" ></td>
+                                <td class="tdUs"><input hidden type="text" name="descripcionTipoServicio" id="descripcionTipoServicio" class="descripcionTipoServicio" value="lavado">Lavado</td>
+                                <td class="tdUs"><input hidden type="text" name="precio" id="precio" class="precio" value="3000" >3000.00</td>
                             </tr>
                             <tr class="trUs">
-                                <td class="tdUs"><input type="checkbox"></td>
-                                <td class="tdUs"> Encerado</td>
-                                <td class="tdUs"> 3000.00</td>
+                                <td class="tdUs"><input hidden type="text"  id="id">2</td>
+                                <td class="tdUs"><input  type="checkbox" class="tipo-servicio" name="tipo-servicio[]" id="tipo-servicio"></td>
+                                <td class="tdUs"><input hidden type="text" name="descripcionTipoServicio" id="descripcionTipoServicio" class="descripcionTipoServicio" value="encerado">Encerado</td>
+                                <td class="tdUs"><input hidden type="text" name="precio" id="precio" class="precio" value="4000">4000.00</td>
                             </tr>
                             <tr class="trUs">
-                                <td class="tdUs"><input type="checkbox"></td>
-                                <td class="tdUs"> Interior</td>
-                                <td class="tdUs"> 3000.00</td>
+                                <td class="tdUs"><input hidden type="text" hidden id="id">3</td>
+                                <td class="tdUs"><input  type="checkbox" class="tipo-servicio" name="tipo-servicio[]" id="tipo-servicio"></td>
+                                <td class="tdUs"><input hidden type="text" name="descripcionTipoServicio" id="descripcionTipoServicio" class="descripcionTipoServicio" value="interior">Interior</td>
+                                <td class="tdUs"><input hidden type="text" name="precio" id="precio" class="precio" value="2000">2000.00</td>
                             </tr>
                             <tr class="trUs">
-                                <td class="tdUs"><input type="checkbox"></td>
-                                <td class="tdUs"> Motor</td>
-                                <td class="tdUs"> 3000.00</td>
+                                <td class="tdUs"><input hidden type="text" hidden id="id">4</td>
+                                <td class="tdUs"><input  type="checkbox" class="tipo-servicio" name="tipo-servicio[]" id="tipo-servicio"></td>
+                                <td class="tdUs"><input hidden type="text" name="descripcionTipoServicio" id="descripcionTipoServicio" class="descripcionTipoServicio" value="motor">Motor</td>
+                                <td class="tdUs"><input hidden type="text" name="precio" id="precio" class="precio" value="5000">5000.00</td>
                             </tr>
                             <tr class="trUs">
-                                <td class="tdUs"><input type="checkbox"></td>
-                                <td class="tdUs"> Siliconado de Neumaticos</td>
-                                <td class="tdUs"> 3000.00</td>
+                                <td class="tdUs"><input hidden type="text" hidden id="id">5</td>
+                                <td class="tdUs"><input  type="checkbox" class="tipo-servicio" name="tipo-servicio[]" id="tipo-servicios"></td>
+                                <td class="tdUs"><input hidden type="text" name="descripcionTipoServicio" id="descripcionTipoServicio" class="descripcionTipoServicio" value="siliconado">Siliconado Motor</td>
+                                <td class="tdUs"><input hidden type="text" name="precio" id="precio" class="precio" value="4500">4500.00</td>
                             </tr>
                         </tbody>
                     </table>
                     <button type="submit" class="boton-turno">Generar Turno de Reservas </button>
+                    <p class="alert alert-success d-none mensaje-valido "></p>
                 </article>
             </form> 
         </section>

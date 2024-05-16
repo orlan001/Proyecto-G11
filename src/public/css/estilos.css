@@ -60,7 +60,6 @@ body{
     margin: 0 10px;
     line-height: 80px;
     margin-top: 10px;
-
 }
 
 .navlink{
@@ -119,6 +118,14 @@ body{
     margin-top: 30px;
     justify-content: center;
     align-items: center;
+ }
+
+ .form-grupo{
+    border-color: white;
+    border-width: 1px;
+    outline:none;
+    margin: 4px;
+    padding: 10px;
  }
 
  .imagen-login{
@@ -247,11 +254,7 @@ body{
    
  }
  
- .form-grupo{
-    border-color: #f1e9eb;
-    border-width: 1px;
-    outline: none;
- }
+ 
  ::placeholder{
     color:lightslategrey;
     opacity: 0.6;
@@ -307,10 +310,9 @@ body{
     grid-template-columns: repeat(2, 1fr);
     margin-top: 30px;
     color: #643843;
-    gap: 10px;
-    padding: 20px;
+    gap: 5px;
+    padding: 10px;
     justify-content: center;
-    width: 70%;
  }
  
  .form-login{
@@ -344,12 +346,15 @@ body{
     margin-top: 5px;    
     margin-bottom: 10px;
     border-bottom-color: aqua;
+    border: none;
+    outline: #ddd;
 }
+
 
 .label{
     display:inline-block;
     width: 155px;
-    text-align: right;
+    text-align: right;    
 }
 
 .contenedor-reserva{
@@ -357,8 +362,8 @@ body{
     grid-template-columns: repeat(2,1fr);
     align-content: center;
     align-items: start;
-    width: 70%;
-    margin: 10px auto;
+    width: 90%;
+    margin: 20px auto;
     gap: 1px;
 }
 
@@ -373,8 +378,8 @@ body{
 .box-reserva{
     margin: 5px auto;
     padding: 1px;
-    width: 200px;
-    height: 18px;
+    width: 240px;
+    height: 20px;
     border: 1px solid rgb(188, 175, 201);
     outline: none;
 }
@@ -388,11 +393,12 @@ body{
     width: 200px;
     color: white;
 }
+
 .boton-reserva-cancelar{
-    background-color: rgb(235, 141, 19);
-    margin-right: 0px;
-    margin-left: 1000px;
-    width: 150px;
+    display: flex;
+    background-color:#FFFDD7;
+    justify-content: end;
+    align-items: end;
 }
 .boton-reserva-estado{
     background-color: #1372ee;
@@ -403,7 +409,7 @@ body{
     margin: 30px;
 }
 
-.mesanje-parrafo-table{
+.mensaje-parrafo-table{
     font-size: 12px;
     color: #643843;
 }
@@ -551,9 +557,11 @@ html{
 }
 
 .icon-detalle-reserva{
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
 }
+
 .btn-login:hover{
     color:white;
 }
@@ -562,17 +570,46 @@ html{
 }
 
 .link-btn-cancelar{
+    display: flex;
     text-decoration: none;
-    color:#ddd;
+    background-color: #FFFDD7;
+    color:#ee2e24;
+    font-size: 20px;
+}    
+
+.msje-pas,
+.msje-us,
+.msje-error{
+    color: #ee2e24;
+    text-align: center;    
+    outline: none;
+    height: 40px;
+    padding: 5px 0;
+    font-size: 12px;
+    width: 250px;
+    margin: 2px  auto 8px;
 }
 
-.mensaje-password,
-.mensaje-usuario{
-    background-color: #70e99e;
+.msje-val{
+    background-color: #b2cff7;
     text-align: center;
+    border-radius: 10px;
+    outline: none;
+    height: 40px;
+    padding: 10px 0;
 }
 
-@media (max-width:768px){
+.header-detalle-reserva{
+    display: flex;
+    justify-content: end;
+    height: 120px;
+    width: 100%;
+    top:0;
+    left: 0;
+}
+
+/*movil */
+@media (max-width:767px){
 
     body{
         padding-top: 10px;
@@ -623,7 +660,6 @@ html{
     .navlink:hover{
         background:none;
         color:red
-
     }
 
     .navlink-active:active{
@@ -648,11 +684,8 @@ html{
     .box-turno {
         width: 200px;
      }
-
+ 
      .contenedor-contacto {
-        display: flex;
-        flex-direction: column;
-        justify-content:center;
         text-align: center;
         align-items: center;
      }
@@ -671,12 +704,138 @@ html{
      }
 
      .label{
-        display: block;
-        text-align: center;
-        width: 155px;
+        display: inline-block;
+        text-align: left;
+        margin: 5px;
     }
+
     .contenedor-ubicacion{
         flex-direction: column;
     }
+
+    .form-grupo{
+        padding: 10px;
+     }
+
 }
+
+/* tablet */
+@media ((min-width:768px) and (max-width:998px)){ 
+
+    .navbar{
+        justify-content:space-evenly;  
+        max-width: 998px;
+        padding: 2px;
+    }
+
+    .figure{
+        height: 100px;
+    }
     
+    .navlista{
+        padding: 10px auto;
+    }
+    
+    .navitem{
+        margin: 0 4px;
+    }
+    
+    .navlink{
+        font-size:15px ;
+        padding: 2px;
+    }
+    
+    .logo{
+        width: 95px;
+        height: 95px;
+       /* filter:drop-shadow(4px 4px 4px black);*/
+    }
+    
+    .icon{
+        margin: 3px;
+    }
+        
+     .contenedor-inicio{
+        margin: 2px;
+     }
+          
+     .contenedor-ubicacion-contacto{
+        height: 400px;
+    }
+    
+     .form-contacto{
+        margin-bottom: 20px;
+        margin: auto;
+     }
+    
+    
+    .contenedor-ubicacion{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mapa-contacto{
+        width: 500px;
+        height: 300px;
+     }
+    
+     .img-contacto{
+        margin-top: 5px;
+        width: 500px;
+        height: 300px;
+     }
+    
+    .contenedor-detalle-reserva{
+        margin: 10px auto 25px;
+    }
+    
+    .form-detalle-reserva{
+        margin:25px 10px;
+    }
+        
+    .boton-reserva-cancelar{
+        display: flex;
+        background-color:#FFFDD7;
+    
+    }
+        .boton-reserva-estado{
+        background-color: #1372ee;
+    }
+    
+    .mensaje-estado-reserva strong{
+        color:rgb(45, 151, 45);
+        margin: 30px;
+    }
+    
+    .parrafo-inicio{
+        text-align: justify;
+        width: 250px;
+     }
+    
+    .table-reserva{
+        margin: 30px auto;
+    }
+            
+    .header-detalle-reserva{
+        display: flex;
+        justify-content: end;
+    }
+
+    .contenedor-reserva{
+        justify-content: center;
+        margin: 4px;
+        font-size: 15px;
+    } 
+
+    .form-grupo{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 10px;
+     }
+
+     .label{
+        display:inline-block;
+        text-align: left
+    }
+}

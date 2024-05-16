@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../public/css/estilos.css">
     <script src="https://kit.fontawesome.com/c273467a6c.js" crossorigin="anonymous"></script>
     <script defer src="../public/js/movil.js"></script>
+    <script defer src="../public/js/validarFormContacto.js"></script>
+
 </head>
 
 <body>
@@ -39,21 +41,28 @@
                 </div>
     
                 <div class="contenedor-mapa-contacto">
-                    <iframe class="mapa-contacto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.871269807724!2d-58.448880025003994!3d-34.607416557692325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca118da22a2f%3A0x37b0a5e9063002c!2sAv.%20S.%20Mart%C3%ADn%20953%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1711238775036!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                   <iframe  class="mapa-contacto"src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13131.44974031567!2d-58.80043525822747!3d-34.632916499804644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1715310343615!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <img src="../public/img/local.png" alt="local de lavado" class="img-contacto">
                 </div>
     
                 <div class="contenedor-form-contacto">                
                     <h2 class="titulo-ubicacion">Dejanos tu Mensaje</h2><br>
                     <form method="post" class="form-contacto">
-                        <label for="correo"> Tu Correo:</label>
-                        <input type="email" name="correo" class="box-contacto" id="correo" required placeholder="ingrese su correo"><br>
+                        <label for="email"> Tu Correo:</label>
+                        <input type="email" name="email" class="box-contacto" id="email" placeholder="ingrese su correo"><br>
+                        <p class="mensaje-email"></p>
                         <label for="nombre"> Tu Nombre:</label>
-                        <input type="text" name="nombre" class="box-contacto" id="nombre" required placeholder="Ingrese su nombre"><br>
-                        <label for="mensaje"> Tu Mensaje:</label>
-                        <textarea name="mensaje" id="mensaje" class="box-contacto-mensaje" cols="30" rows="10" placeholder="Escriba su mensaje.."></textarea><br>
-                        <input type="submit" class="boton-contacto" value="Enviar">
+                        <input type="text" name="nombre" class="box-contacto" id="nombre"  placeholder="Ingrese su nombre"><br>
+                        <p class="mensaje-nombre"></p>
+                        <label for="apellido"> Tu Apellido:</label>
+                        <input type="text" name="apellido" class="box-contacto" id="apellido"  placeholder="Ingrese su Apellido"><br>
+                        <p class="mensaje-apellido"></p>
+                        <label for="textarea"> Tu Mensaje:</label>
+                        <textarea name="textarea" id="textarea" class="box-contacto-mensaje" cols="30" rows="10" placeholder="Escriba su mensaje.."></textarea><br>
+                        <p class="mensaje-textarea"></p>
+                        <button type="submit" class="boton-contacto">Enviar Datos </button>
                     </form>
+                    <p class="mensaje-valido"></p>
                 </div>                
             </article>
         </section>
